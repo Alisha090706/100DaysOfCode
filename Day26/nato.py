@@ -13,12 +13,14 @@ word=input("Enter a word: ").upper()
 
 # Create a list where each letter in the word is replaced by its corresponding phonetic code
 # Example: if user enters "AB", the list will be ["Alpha", "Bravo"]
-list=[]
-for letter in word:
+def generate_phonetic_list(word):
     try:
-        list.append(phonetic_dict[letter])
+        list=[phonetic_dict[letter] for letter in word ]
+        print(list)
     except KeyError:
         print("Sorry, only letters in the alphabet are allowed.")
-        break
-print(list)
+        generate_phonetic_list(input("Enter a word: ").upper())
+    else:
+        print("Phonetic representation:", list)
 
+generate_phonetic_list(word)
