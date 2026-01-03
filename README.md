@@ -1,4 +1,4 @@
-# 🐍 100 Days of Code – Python Bootcamp (Day 1–33)
+# 🐍 100 Days of Code – Python Bootcamp (Day 1–34)
 
 This repository documents my journey through **Angela Yu’s _100 Days of Code: The Complete Python Pro Bootcamp_**.  
 Each day focuses on learning new Python concepts and applying them through hands-on projects.
@@ -32,7 +32,7 @@ I will keep updating this repository as I progress further in the challenge.
 
 ---
 
-## 📅 Day-wise Projects (Day 1–33)
+## 📅 Day-wise Projects (Day 1–34)
 
 ### Day 1 – Band Name Generator
 - Basics of `print()` and `input()`
@@ -161,11 +161,15 @@ I will keep updating this repository as I progress further in the challenge.
 - Fetching data from external APIs
 - Using real-time data in applications
 
+### Day 34 – Quizzler
+- Fetching data from external APIs (Trivia Database)
+- Tkinter GUI
+- Object Oriented Programming
 ---
 
 ## 🚀 Progress Status
-- ✅ Completed: Day 1 – Day 33  
-- 🔄 Ongoing: Day 34 onwards  
+- ✅ Completed: Day 1 – Day 34  
+- 🔄 Ongoing: Day 35 onwards  
 
 ---
 
