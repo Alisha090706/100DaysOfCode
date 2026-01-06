@@ -1,4 +1,4 @@
-# 🐍 100 Days of Code – Python Bootcamp (Day 1–35)
+# 🐍 100 Days of Code – Python Bootcamp (Day 1–36)
 
 This repository documents my journey through **Angela Yu’s _100 Days of Code: The Complete Python Pro Bootcamp_**.  
 Each day focuses on learning new Python concepts and applying them through hands-on projects.
@@ -32,7 +32,7 @@ I will keep updating this repository as I progress further in the challenge.
 
 ---
 
-## 📅 Day-wise Projects (Day 1–35)
+## 📅 Day-wise Projects (Day 1–36)
 
 ### Day 1 – Band Name Generator
 - Basics of `print()` and `input()`
@@ -170,11 +170,15 @@ I will keep updating this repository as I progress further in the challenge.
 - API Authentication
 - SMS Sender
 
+### Day 36 – Stock Trading News Alert
+- API Authentication
+- SMS Sender
+
 ---
 
 ## 🚀 Progress Status
-- ✅ Completed: Day 1 – Day 35  
-- 🔄 Ongoing: Day 36 onwards  
+- ✅ Completed: Day 1 – Day 36  
+- 🔄 Ongoing: Day 37 onwards  
 
 ---
 
