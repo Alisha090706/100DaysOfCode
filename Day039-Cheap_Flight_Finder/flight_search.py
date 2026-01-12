@@ -1,0 +1,73 @@
+import os
+import requests
+from dotenv import load_dotenv
+
+load_dotenv()
+
+TOKEN_ENDPOINT = "https://test.api.amadeus.com/v1/security/oauth2/token"
+IATA_ENDPOINT = "https://test.api.amadeus.com/v1/reference-data/locations/cities"
+FLIGHT_SEARCH_ENDPOINT = "https://test.api.amadeus.com/v2/shopping/flight-offers"
+
+class FlightSearch:
+    #This class is responsible for talking to the Flight Search API.
+    def __init__(self):
+        self.api_key = os.getenv("API_KEY")
+        self.api_secret = os.getenv("API_SECRET")
+
+        self.token = self.get_token()
+    def get_token(self):
+        headers = {
+            "Content-Type": "application/x-www-form-urlencoded"
+        }
+        data = {
+            "grant_type": "client_credentials",
+            "client_id": self.api_key,
+            "client_secret": self.api_secret
+        }
+        response = requests.post(url= TOKEN_ENDPOINT, headers= headers, data= data)
+        response.raise_for_status()
+        token_data = response.json()
+        return token_data["access_token"]
+    def get_destination(self,city_name):
+        headers = {
+            "Authorization": f"Bearer {self.token}"
+        }
+        query = {
+            "keyword": city_name,
+            "max": "2",
+            "include": "AIRPORTS",
+        }
+        response = requests.get(
+            url=IATA_ENDPOINT,
+            headers=headers,
+            params=query
+        )
+
+        print(f"Status code {response.status_code}. Airport IATA: {response.text}")
+
+        try:
+            code = response.json()["data"][0]["iataCode"]
+        except (IndexError, KeyError):
+            code = None
+
+        return code
+    
+    def check_flights(self, origin_city_code, destination_city_code, from_time, to_time):
+        headers = {
+            "Authorization": f"Bearer {self.token}"
+        }
+        query = {
+            "originLocationCode": origin_city_code,
+            "destinationLocationCode": destination_city_code,
+            "departureDate": from_time,
+            "returnDate": to_time,
+            "adults": "1",
+            "max": "1",
+        }
+        response = requests.get(
+            url=FLIGHT_SEARCH_ENDPOINT,
+            headers=headers,
+            params=query
+        )
+        print(f"Status code {response.status_code}. Flight Search: {response.text}")
+        return response.json()

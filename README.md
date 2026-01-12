@@ -1,4 +1,4 @@
-# 🐍 100 Days of Code – Python Bootcamp (Day 1–38)
+# 🐍 100 Days of Code – Python Bootcamp (Day 1–39)
 
 This repository documents my journey through **Angela Yu’s _100 Days of Code: The Complete Python Pro Bootcamp_**.  
 Each day focuses on learning new Python concepts and applying them through hands-on projects.
@@ -32,7 +32,7 @@ I will keep updating this repository as I progress further in the challenge.
 
 ---
 
-## 📅 Day-wise Projects (Day 1–38)
+## 📅 Day-wise Projects (Day 1–39)
 
 ### Day 1 – Band Name Generator
 - Basics of `print()` and `input()`
@@ -184,11 +184,17 @@ I will keep updating this repository as I progress further in the challenge.
 - HTTP Requests
 - Google Sheets Integration
 - Environment Variables
+
+### Day 39 – Cheap Flight Finder
+- API Authentication
+- HTTP Requests
+- Google Sheets Integration
+- Environment Variables
 ---
 
 ## 🚀 Progress Status
-- ✅ Completed: Day 1 – Day 38  
-- 🔄 Ongoing: Day 39 onwards  
+- ✅ Completed: Day 1 – Day 39  
+- 🔄 Ongoing: Day 40 onwards  
 
 ---
 
